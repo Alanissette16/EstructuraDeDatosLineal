@@ -1,4 +1,8 @@
+import java.util.Stack;
+
 import Cola.Cola;
+import Ejercicio_01_sign.SignValidator;
+import Ejercicio_02_sorting.StackSorter;
 import Materia.ColaGenerica;
 import Materia.Models.Pantallas;
 import Materia.Pilas.Pila;
@@ -63,7 +67,40 @@ public class App {
         System.out.println("Pantalla destruida: \n\t"+colaGenerica.remove().getNombre());
         System.out.println("Pantalla destruida: \n\t"+colaGenerica.remove().getNombre());
         System.out.println("La cola tiene "+colaGenerica.size()+" Elementos");
+        System.out.println();
+       //EJERCICIO 01 Validación de Signos
+       String cadena = "([]){}";
+       if(SignValidator.validarSignos(cadena)){
+        System.out.println("La cadena "+cadena+" está correctamente equilibrada.");
+        }else {
+            System.out.println("La cadena "+cadena+" NO está correctamente equilibrada.");
+        }
+        String cadena1 = "({)}";
+        if (SignValidator.validarSignos(cadena1)) {
+            System.out.println("La cadena1 "+cadena1+"está correctamente equilibrada.");
+        } else {
+            System.out.println("La cadena1 "+cadena1+" NO está correctamente equilibrada.");
+        }
+            System.out.println();
+
+            // EJERCICIO 02 ORDENAR UN STACK
+            Stack<Integer> stack = new Stack<>();
+            stack.push(30);
+            stack.push(50);
+            stack.push(16);
+            stack.push(24);
+    
+            System.out.println("Stack previo a ordenar: " + stack);
+            StackSorter.OrdenarStack(stack);
+            System.out.println("Stack después de ordenar: " + stack);
+    
+            
 
 
     }
 }
+
+
+
+    
+
