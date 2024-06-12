@@ -39,12 +39,12 @@ public class ListaEnlazada {
             current = current.next;
         }
     }
-
+    //METODO PARA SABER EL TAMAÑO
     public int size(){
         return 1;
     }
 
-
+    //METODO PARA IMPRIMIR
     public void print(){
         if(head == null){
             System.out.println("Lista vacia");

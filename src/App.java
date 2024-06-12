@@ -3,6 +3,7 @@ import java.util.Stack;
 import Cola.Cola;
 import Ejercicio_01_sign.SignValidator;
 import Ejercicio_02_sorting.StackSorter;
+import Ejercicio_03_linkedLists.LinkedListEjr;
 import Materia.ColaGenerica;
 import Materia.ListasEnlazadas.ListaEnlazada;
 import Materia.Models.Pantallas;
@@ -96,17 +97,29 @@ public class App {
     //         System.out.println("Stack después de ordenar: " + stack);
 
             //Lista ENLAZADA
-            ListaEnlazada lista = new ListaEnlazada();
-            lista.addNode(1);
-            lista.addNode(4);
-            lista.addNode(3);
-            lista.addNode(6);
-            lista.print();
-            lista.deleteNode(1);
-            lista.print();
-            lista.deleteNode(3);
-            lista.print();
-            
+            // ListaEnlazada lista = new ListaEnlazada();
+            // lista.addNode(1);
+            // lista.addNode(4);
+            // lista.addNode(3);
+            // lista.addNode(6);
+            // lista.print();
+            // lista.deleteNode(1);
+            // lista.print();
+            // lista.deleteNode(3);
+            // lista.print();
+            //EJERCICIO 03 BUSCAR POSICION EN LISTA ENLAZADA
+        ListaEnlazada lista = new ListaEnlazada();
+        lista.addNode(1);
+        lista.addNode(2);
+        lista.addNode(5);
+        lista.addNode(7);
+        lista.addNode(6);
+
+        LinkedListEjr ejercicio = new LinkedListEjr();
+        int n = 1;
+        int resultado = ejercicio.getByPos(lista, n);
+        System.out.println("Posicion a buscar: " + n);
+        System.out.println("Return: "+ resultado);
 
 
     }
